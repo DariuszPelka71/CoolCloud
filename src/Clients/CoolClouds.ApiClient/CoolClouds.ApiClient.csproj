@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Typed HTTP client shared by the MAUI and Blazor apps. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\CoolClouds.Contracts\CoolClouds.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

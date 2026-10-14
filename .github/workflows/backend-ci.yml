@@ -1,0 +1,40 @@
+name: Backend CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      # Mobile (MAUI) needs extra workloads and macOS for iOS, so it gets its own workflow later.
+      - name: Build backend and shared libraries
+        run: |
+          for proj in \
+            src/Core/CoolClouds.Domain \
+            src/Core/CoolClouds.Contracts \
+            src/Core/CoolClouds.Infrastructure \
+            src/Core/CoolClouds.Rendering \
+            src/Clients/CoolClouds.ApiClient \
+            src/Backend/CoolClouds.Api \
+            src/Backend/CoolClouds.Functions; do
+            if ls "$proj"/*.csproj >/dev/null 2>&1; then
+              echo "::group::$proj"
+              dotnet build "$proj" -c Release
+              echo "::endgroup::"
+            fi
+          done
+
+      - name: Test
+        run: |
+          for proj in tests/*/; do
+            if ls "$proj"*.csproj >/dev/null 2>&1; then dotnet test "$proj" -c Release; fi
+          done

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- SkiaSharp compositing shared by Mobile, Web and the backend.
+       The SkiaSharp package is added by scripts/scaffold. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoolClouds.Contracts\CoolClouds.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

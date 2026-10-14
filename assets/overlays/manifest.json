@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "assets": [
+    { "id": "eye-round-01",   "type": "Eye",   "file": "eyes/eye-round-01.svg",     "anchor": { "x": 0.5, "y": 0.5 }, "premium": false },
+    { "id": "nose-button-01", "type": "Nose",  "file": "noses/nose-button-01.svg",  "anchor": { "x": 0.5, "y": 0.6 }, "premium": false },
+    { "id": "mouth-smile-01", "type": "Mouth", "file": "mouths/mouth-smile-01.svg", "anchor": { "x": 0.5, "y": 0.4 }, "premium": false },
+    { "id": "ear-cat-01",     "type": "Ear",   "file": "ears/ear-cat-01.svg",       "anchor": { "x": 0.5, "y": 0.9 }, "premium": false }
+  ]
+}

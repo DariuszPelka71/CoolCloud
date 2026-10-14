@@ -1,0 +1,41 @@
+# Build output
+bin/
+obj/
+artifacts/
+publish/
+*.binlog
+
+# IDEs
+.vs/
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.user
+*.suo
+*.DotSettings.user
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets and local settings
+appsettings.Development.local.json
+local.settings.json
+*.pfx
+.env
+
+# Azure Functions / Azurite
+__azurite_db_*.json
+__blobstorage__/
+__queuestorage__/
+.azurite/
+
+# MAUI / mobile
+*.apk
+*.aab
+*.ipa
+*.dSYM/
+
+# Test results
+TestResults/
+coverage/
